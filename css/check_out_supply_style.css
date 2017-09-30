@@ -1,0 +1,76 @@
+*{
+	box-sizing: border-box;
+}
+
+.another_supply a{
+	text-decoration: none;
+}
+
+.cancel-check-out{
+	cursor: pointer;
+}
+
+.cancel-check-out:hover{
+	color: red;
+}
+
+#check_out_all{
+	margin: 10px 20px 20px 280px;
+	display: none;
+}
+
+.close-prompt{
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+dd{
+	margin-left: 30px;
+}
+
+
+.hide-prompt{
+	display: none;
+}
+
+.supply-row{
+	cursor: pointer;
+}
+
+.modal{
+	margin-top: 15vh;
+}
+
+.modal-content{
+	border-radius: 0px;
+	padding: 2em;
+}
+
+.supply_out{
+	/*margin-top: 5em;*/
+}
+
+.table-responsive{
+	overflow-x: initial;
+}
+
+#supplies{
+	margin-top: 2em;
+}
+
+.list_supplies{
+	min-height: 26vh;
+	padding: 4%;
+}
+
+.prompt{
+	margin-top: 12vh;
+}
+
+.prompt-quantity{
+	width: 120px;
+}
+
+.supply-left{
+	width: 191px;
+}

@@ -1,0 +1,7 @@
+#new_supply_mod .modal-body, #edit_supply_mod .modal-body {
+    height: 152px;
+}
+
+#inventory_table{
+	display: none;
+}
