@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+	<link rel="icon" href="../images/Unibersidad_ng_Pilipinas.png"/>
 	<script type="text/javascript" src="../bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
@@ -12,6 +13,7 @@
 	<script type="text/javascript" src="../js/jquery-paginate.js"></script>
 	<?php
 		require "functions/edit_account_functions.php";
+		require "functions/add_user_functions.php";
 	 ?>
 </head>
 <body>
@@ -71,6 +73,7 @@
 							</div>
 							<div class="form-group">
 								<label class="">Old Password</label>
+								<label><?=$error_password ?></label>
 								<input type="password" class="form-control" id="oldpassword" name="oldpassword" required/>
 							</div>
 							<div class="form-group">
@@ -87,7 +90,7 @@
 								</select>
 							</div>
 							<div class="from-group">
-								<button class="btn btn-primary">Submit</button>
+								<input name="submit" type="submit" class="btn btn-primary" />
 							</div>
 						</form>
 					</div>

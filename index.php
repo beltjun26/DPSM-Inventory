@@ -4,6 +4,7 @@
 	<title>Log-in</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/log_in_style.css"/>
+	<link rel="icon" href="images/Unibersidad_ng_Pilipinas.png"/>
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
