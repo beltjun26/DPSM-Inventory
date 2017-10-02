@@ -94,9 +94,11 @@ CREATE TABLE `supply_log` (
 CREATE TABLE `users` (
   `username` varchar(20) NOT NULL,
   `password` varchar(60) NOT NULL,
-  `name` varchar(60) NOT NULL
+  `name` varchar(60) NOT NULL,
+  `type` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `users` (`username`, `password`, `name`, `type`) VALUES ('admin', MD5('admin'), 'admin', 'admin');
 --
 -- Indexes for dumped tables
 --
@@ -138,6 +140,7 @@ ALTER TABLE `supply_log`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`);
 
+INSERT INTO `users`(`username`, `password`, `name`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -187,6 +190,7 @@ ALTER TABLE `supply`
 ALTER TABLE `supply_log`
   ADD CONSTRAINT `supply_log_ibfk_1` FOREIGN KEY (`supply_id`) REFERENCES `supply` (`supply_id`),
   ADD CONSTRAINT `supply_log_ibfk_2` FOREIGN KEY (`imbursed_by`) REFERENCES `users` (`username`);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
