@@ -47,7 +47,9 @@
 									<li><a href="check_out_supply.php"><span class="glyphicon glyphicon-check"></span>Check Out Supply</a></li>
 								</ul>
 							</li>
-							<li class="active"><a href="#">Manage Account <?php echo $_SESSION['user']['type'] ?></a></li>
+							<?php if($_SESSION['user']['type']=="admin"){?>
+								<li class="active"><a href="<?php $_PHP_SELF;?>">Manage Account</a></li>
+							<?php } ?>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
@@ -94,9 +96,10 @@
 								while($row=$query->fetch_array()){
 								?>
 									<tr>
-										<td><a href="edit_account.php?username=<?=$row['username']?>"><?=$row['name']?></a></td>
+										<td><?=$row['name']?></td>
 										<td><?=$row['username']?></td>
 										<td><?=$row['type']?></td>
+										<td><a class="btn btn-danger pull-right" href="functions/delete_account.php?username=<?=$row['username']?>">Remove</a></td>
 									</tr>
 
 								<?php

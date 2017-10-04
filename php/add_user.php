@@ -12,7 +12,6 @@
 	<script type="text/javascript" src="../js/equipment_log.js"></script>
 	<script type="text/javascript" src="../js/jquery-paginate.js"></script>
 	<?php
-		require "functions/edit_account_functions.php";
 		require "functions/add_user_functions.php";
 	 ?>
 </head>
@@ -31,9 +30,9 @@
 					</div>
 					<div class="collapse navbar-collapse" id="navbar">
 						<ul class="nav navbar-nav">
-							<li class="active log"><a href="javascript:void(0)" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Equipment<span class="caret"></span></a>
+							<li class="log"><a href="javascript:void(0)" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Equipment<span class="caret"></span></a>
 								<ul class="dropdown-menu log-menu">
-									<li class="active"><a href="javascript:void(0)"><span class="glyphicon glyphicon-th-list"></span>Logs</a></li>
+									<li><a href="javascript:void(0)"><span class="glyphicon glyphicon-th-list"></span>Logs</a></li>
 									<li><a href="equipment_inventory.php"><span class="glyphicon glyphicon-book"></span> Inventory</a></li>
 									<li><a href="equipment_history.php"><span class="glyphicon glyphicon-list-alt"></span> History</a></li>
 								</ul>
@@ -67,17 +66,22 @@
 					</div>
 					<div class="panel-body">
 						<form method="post" action="<?php $_PHP_SELF;?>">
-							<div class="form-group">
-								<label class="">Username</label>
+							<div class="form-group <?php if($username_error){echo "has-error";}?> has-feedback">
+							<label class="control-label" for="username">Username <?=$username_error?></label>
 								<input class="form-control" type="text" id="username" name="username" required/>
+								<?php if($username_error){?>
+									<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+								<?php } ?>
+							</div>
+							<div class="form-group has-feedback <?php if($name_error){echo "has-error";}?>">
+								<label class="control-label">Name <?=$name_error?></label>
+								<input class="form-control" type="text" id="name" name="name" required/>
+								<?php if($name_error){?>
+									<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+								<?php } ?>
 							</div>
 							<div class="form-group">
-								<label class="">Old Password</label>
-								<label><?=$error_password ?></label>
-								<input type="password" class="form-control" id="oldpassword" name="oldpassword" required/>
-							</div>
-							<div class="form-group">
-								<label class="">New Password</label>
+								<label class="">Password</label>
 								<input class="form-control" type="password" id="password" name="password" required>
 							</div>
 							<div class="form-group">

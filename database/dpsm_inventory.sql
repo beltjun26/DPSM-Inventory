@@ -140,7 +140,7 @@ ALTER TABLE `supply_log`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`);
 
-INSERT INTO `users`(`username`, `password`, `name`);
+
 --
 -- AUTO_INCREMENT for dumped tables
 --

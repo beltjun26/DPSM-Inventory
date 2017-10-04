@@ -54,7 +54,9 @@
 									<li class="active"><a href="javascript:void(0)"><span class="glyphicon glyphicon-check"></span>Check Out Supply</a></li>
 								</ul>
 							</li>
-							<li><a href="manage_accounts.php">Manage Account <?php echo $_SESSION['user']['type'] ?></a></li>
+							<?php if($_SESSION['user']['type']=="admin"){?>
+								<li ><a href="manage_accounts.php">Manage Account</a></li>
+							<?php } ?>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
